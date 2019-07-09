@@ -14,13 +14,16 @@ author:
     # twitter: brentthorne18 
     email: tom.palmer@lancaster.ac.uk
   - name: Roland Ramsahai
-    # affil: 2
+    #orcid: '0000-0002-7349-1977'
+    #affil: 2
     main: false
     # email: 'ag.con@posterdown.net'
   - name: Vanessa Didelez
     affil: 2
+    #orcid: '0000-0001-8587-7706'
   - name: Nuala Sheehan
     affil: 3
+    #orcid: '0000-0001-9094-2605'
 affiliation:
   - num: 1
     address: Department of Mathematics and Statistics, Lancaster University
