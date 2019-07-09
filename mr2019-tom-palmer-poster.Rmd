@@ -41,8 +41,8 @@ middle_textcol: "#FFFFFF" # white
 middle:textalpha: 90
 middle_fontsize: "150px"
 main_findings:
-  - "What **range** could your **causal effect** lie between if the IV assumptions held?"
-  - "Find out with our **bpbounds R package** and **Shiny app**!"
+  - "What **range** could your **causal effect** lie between if the instrumental variable assumptions held?"
+  - "**Find out** with our **bpbounds R package** and **Shiny app**!"
 logoleft_name: "Figures/Shield-Twitter.jpg"
 #logocenter_name: "Figures/qrcode-bpbounds-pkgdown.png"
 logoright_name: "Figures/Shield-Twitter.jpg"
