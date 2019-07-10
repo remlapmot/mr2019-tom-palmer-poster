@@ -66,34 +66,11 @@ Here are the steps to recreate the poster.
     ``` r
     file.copy("mr2019-tom-palmer-poster.html", 
               "./docs/")
-    ```
-    
-        ## [1] TRUE
-    
-    ``` r
     dir.create("./docs/Figures")
-    ```
-    
-        ## Warning in dir.create("./docs/Figures"): '.\docs\Figures' already exists
-    
-    ``` r
     file.copy("Figures", "./docs/", recursive = TRUE)
-    ```
-    
-        ## [1] TRUE
-    
-    ``` r
     dir.create("./docs/mr2019-tom-palmer-poster_files")
-    ```
-    
-        ## Warning in dir.create("./docs/mr2019-tom-palmer-poster_files"): '.
-        ## \docs\mr2019-tom-palmer-poster_files' already exists
-    
-    ``` r
     file.copy("mr2019-tom-palmer-poster_files", "./docs/", recursive = TRUE)
     ```
-    
-        ## [1] TRUE
     
       - I renamed the html poster file to `index.html` and the files
         folder to `index_files`.
@@ -103,16 +80,9 @@ Here are the steps to recreate the poster.
     ``` r
     file.rename("./docs/mr2019-tom-palmer-poster.html", 
                 "./docs/index.html")
+    file.copy("./docs/mr2019-tom-palmer-poster_files",
+                "./docs/index_files", recursive = TRUE)
     ```
-    
-        ## [1] TRUE
-    
-    ``` r
-    file.rename("./docs/mr2019-tom-palmer-poster_files",
-                "./docs/index_files")
-    ```
-    
-        ## [1] FALSE
     
       - I then enabled github pages for this repository in the
         repository settings on GitHub.

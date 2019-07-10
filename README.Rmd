@@ -46,7 +46,7 @@ Here are the steps to recreate the poster.
 1. To render on github pages:
 
     * I copied the html poster and its associated `_files` folder and folder of figures, `Figures`, to the `docs` folder because I prefer enabling github pages for a repo from the docs folder rather than from a separate branch.
-    ```{r}
+    ```{r, results=FALSE, warning=FALSE}
     file.copy("mr2019-tom-palmer-poster.html", 
               "./docs/")
     dir.create("./docs/Figures")
@@ -55,11 +55,11 @@ Here are the steps to recreate the poster.
     file.copy("mr2019-tom-palmer-poster_files", "./docs/", recursive = TRUE)
     ```
     * I renamed the html poster file to `index.html` and the files folder to `index_files`.
-    ```{r}
+    ```{r, results=FALSE, warning=FALSE}
     file.rename("./docs/mr2019-tom-palmer-poster.html", 
                 "./docs/index.html")
-    file.rename("./docs/mr2019-tom-palmer-poster_files",
-                "./docs/index_files")
+    file.copy("./docs/mr2019-tom-palmer-poster_files",
+                "./docs/index_files", recursive = TRUE)
     ```
     * I then enabled github pages for this repository in the repository settings on GitHub.
 
