@@ -425,7 +425,7 @@ span > #tab:mytable {
 <ul>
 <li>We present our bpbounds R package and Shiny web app for the nonparametric bounds for the average causal effect (ACE) due to Balke and Pearl <span class="citation">(Palmer et al. 2018)</span>.</li>
 <li>This is an R implementation of our Stata programs <span class="citation">(Palmer et al. 2011)</span>.</li>
-<li>The package can be installed from CRAN:</li>
+<li>The package can be installed from CRAN as follows:</li>
 </ul>
 <pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;bpbounds&quot;</span>)</span></code></pre>
 <ul>
@@ -447,11 +447,11 @@ span > #tab:mytable {
 <li>There are at least two ways to implement the Balke-Pearl bounds:</li>
 </ul>
 <ol style="list-style-type: lower-roman">
-<li>conditional probabilities from contingency tables;</li>
+<li>using conditional probabilities calculated from contingency tables;</li>
 <li>the polytope method due to <span class="citation">Dawid (2003)</span>.</li>
 </ol>
 <ul>
-<li>We implemented the polytope method since it is generalisable for identified IV models with exposures, outcomes, and instruments with more categories.</li>
+<li>We implemented the polytope method since it is generalisable for identified IV models with exposures, outcomes, and instruments with more than 2 categories.</li>
 <li>Currently, we allow for a binary or 3 category instrument, and binary exposure and outcome.</li>
 </ul>
 </div>
@@ -459,7 +459,7 @@ span > #tab:mytable {
 <h1>Example Mendelian randomization analysis</h1>
 <ul>
 <li>We extract an example from <span class="citation">Meleady et al. (2003)</span>.</li>
-<li>We have a 3 category instrument and binary phenotype and outcomes.</li>
+<li>We have a 3 category instrument and binary exposure and outcome.</li>
 <li>We use the 677CT polymorphism (rs1801133) in the MTHFR gene, involved in folate metabolism, as an instrumental variable to investigate the causal effect of homocysteine on the risk of cardiovascular disease.</li>
 <li>The code is shown on the right.</li>
 <li>The ACE lies between a risk difference of -9% to 74% increase in absolute risk.</li>

@@ -82,7 +82,7 @@ knitr::opts_chunk$set(
 
 * We present our bpbounds R package and Shiny web app for the nonparametric bounds for the average causal effect (ACE) due to Balke and Pearl [@bpbounds-package]. 
 * This is an R implementation of our Stata programs [@palmer-sj-2011].
-* The package can be installed from CRAN:
+* The package can be installed from CRAN as follows:
 ```{r, echo=TRUE, eval=FALSE}
 install.packages("bpbounds")
 ```
@@ -100,16 +100,16 @@ https://github.com/remlapmot/bpbounds
 
 * There are at least two ways to implement the Balke-Pearl bounds:
 
-i) conditional probabilities from contingency tables;
+i) using conditional probabilities calculated from contingency tables;
 ii) the polytope method due to @dawid-hsss-2003.
 
-* We implemented the polytope method since it is generalisable for identified IV models with exposures, outcomes, and instruments with more categories.
+* We implemented the polytope method since it is generalisable for identified IV models with exposures, outcomes, and instruments with more than 2 categories.
 * Currently, we allow for a binary or 3 category instrument, and binary exposure and outcome.
 
 # Example Mendelian randomization analysis
 
 * We extract an example from @meleady-ajcn-2003. 
-* We have a 3 category instrument and binary phenotype and outcomes. 
+* We have a 3 category instrument and binary exposure and outcome. 
 * We use the 677CT polymorphism (rs1801133) in the MTHFR gene, involved in folate metabolism, as an instrumental variable to investigate the causal effect of homocysteine on the risk of cardiovascular disease.
 * The code is shown on the right.
 * The ACE lies between a risk difference of -9% to 74% increase in absolute risk.
