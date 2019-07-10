@@ -47,7 +47,7 @@ main_findings:
   - "What **range** could your **causal effect** lie between if the instrumental variable assumptions held?"
   - "**Find out** with our **bpbounds R package** and **Shiny app**!"
 logoleft_name: "Figures/Shield-Twitter.jpg"
-#logocenter_name: "Figures/qrcode-bpbounds-pkgdown.png"
+logocenter_name: "Figures/qr-code-poster-github-pages.png"
 logoright_name: "Figures/Shield-Twitter.jpg"
 #---POSTER BODY OPTIONS---#
 primary_colour: '#b5121b' # LU red # '#0b4545'
