@@ -45,22 +45,17 @@ Here are the steps to recreate the poster.
 
 1. To render on github pages:
 
-    * I copied the html poster and its associated `_files` folder and folder of figures, `Figures`, to the `docs` folder because I prefer enabling github pages for a repo from the docs folder rather than from a separate branch.
-    ```{r, results=FALSE, warning=FALSE}
-    file.copy("mr2019-tom-palmer-poster.html", 
-              "./docs/")
-    dir.create("./docs/Figures")
-    file.copy("Figures", "./docs/", recursive = TRUE)
-    dir.create("./docs/mr2019-tom-palmer-poster_files")
-    file.copy("mr2019-tom-palmer-poster_files", "./docs/", recursive = TRUE)
+    * I copied the html poster and its associated `_files` folder and folder of figures, `Figures`, to the `docs` folder because I prefer enabling github pages for a repo from the docs folder rather than from a separate branch. The html file is renamed to index.html (and its _file folder renamed) so the github pages page will render.
+    ```{r}
+    # install.packages("fs") # uncomment on first run
+    fs::file_copy("mr2019-tom-palmer-poster.html",
+                  "./docs/index.html",
+                  overwrite = TRUE)
+    fs::dir_copy("./Figures", "./docs/Figures", overwrite = TRUE)
+    fs::dir_copy("./mr2019-tom-palmer-poster_files", 
+                 "./docs/index_files", overwrite = TRUE)
     ```
-    * I renamed the html poster file to `index.html` and the files folder to `index_files`.
-    ```{r, results=FALSE, warning=FALSE}
-    file.rename("./docs/mr2019-tom-palmer-poster.html", 
-                "./docs/index.html")
-    file.copy("./docs/mr2019-tom-palmer-poster_files",
-                "./docs/index_files", recursive = TRUE)
-    ```
+
     * I then enabled github pages for this repository in the repository settings on GitHub.
 
 1. The pdf version of the poster can be generated either by opening the html version in Google Chrome and selecting `Print` then `Save as PDF` through the menus or by using the `chrome_print()` function in the [`pagedown`](https://github.com/rstudio/pagedown) package as follows.

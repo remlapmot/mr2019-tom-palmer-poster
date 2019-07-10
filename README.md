@@ -59,29 +59,20 @@ Here are the steps to recreate the poster.
       - I copied the html poster and its associated `_files` folder and
         folder of figures, `Figures`, to the `docs` folder because I
         prefer enabling github pages for a repo from the docs folder
-        rather than from a separate branch.
+        rather than from a separate branch. The html file is renamed to
+        index.html (and its \_file folder renamed) so the github pages
+        page will render.
     
     <!-- end list -->
     
     ``` r
-    file.copy("mr2019-tom-palmer-poster.html", 
-              "./docs/")
-    dir.create("./docs/Figures")
-    file.copy("Figures", "./docs/", recursive = TRUE)
-    dir.create("./docs/mr2019-tom-palmer-poster_files")
-    file.copy("mr2019-tom-palmer-poster_files", "./docs/", recursive = TRUE)
-    ```
-    
-      - I renamed the html poster file to `index.html` and the files
-        folder to `index_files`.
-    
-    <!-- end list -->
-    
-    ``` r
-    file.rename("./docs/mr2019-tom-palmer-poster.html", 
-                "./docs/index.html")
-    file.copy("./docs/mr2019-tom-palmer-poster_files",
-                "./docs/index_files", recursive = TRUE)
+    # install.packages("fs") # uncomment on first run
+    fs::file_copy("mr2019-tom-palmer-poster.html",
+                  "./docs/index.html",
+                  overwrite = TRUE)
+    fs::dir_copy("./Figures", "./docs/Figures", overwrite = TRUE)
+    fs::dir_copy("./mr2019-tom-palmer-poster_files", 
+                 "./docs/index_files", overwrite = TRUE)
     ```
     
       - I then enabled github pages for this repository in the
@@ -135,6 +126,7 @@ Here are the steps to recreate the poster.
         ##  crayon        1.3.4   2017-09-16 [1]
         ##  digest        0.6.20  2019-07-04 [1]
         ##  evaluate      0.14    2019-05-28 [1]
+        ##  fs            1.3.1   2019-05-06 [1]
         ##  highr         0.8     2019-03-20 [1]
         ##  htmltools     0.3.6   2017-04-28 [1]
         ##  httpuv        1.5.1   2019-04-05 [1]
@@ -168,6 +160,7 @@ Here are the steps to recreate the poster.
         ##  CRAN (R 3.6.0)                         
         ##  CRAN (R 3.6.0)                         
         ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.1)                         
         ##  CRAN (R 3.6.0)                         
         ##  CRAN (R 3.6.0)                         
         ##  CRAN (R 3.6.0)                         
