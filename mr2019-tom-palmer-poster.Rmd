@@ -143,14 +143,14 @@ bpres3 <- bpbounds(as.table(p3))
 summary(bpres3)
 ```
 
-```{r qrcode-shiny, out.width="38%", fig.cap='Shiny app https://remlapmot.shinyapps.io/bpbounds'}
+```{r qrcode-shiny, out.width="35%", fig.cap='Shiny app https://remlapmot.shinyapps.io/bpbounds'}
 knitr::include_graphics("./Figures/qr-code-bpbounds-shiny-app.png")
 ```
 
-```{r shiny-app-screenshot, out.width="80%", fig.cap='Screenshot of our Shiny app.'}
+```{r shiny-app-screenshot, out.width="75%", fig.cap='Screenshot of our Shiny app.'}
 knitr::include_graphics("./Figures/bpbounds-shiny-app-screenshot.png")
 ```
 
-```{r qrcode-pkgdown, out.width="38%", fig.cap='Package website https://remlapmot.github.io/bpbounds/'}
+```{r qrcode-pkgdown, out.width="35%", fig.cap='Package website https://remlapmot.github.io/bpbounds/'}
 knitr::include_graphics("Figures/qrcode-bpbounds-pkgdown.png")
 ```
