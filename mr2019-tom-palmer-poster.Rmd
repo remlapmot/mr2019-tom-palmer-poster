@@ -92,17 +92,19 @@ https://github.com/remlapmot/bpbounds
 
 # Methods
 
+* Under the instrumental variable assumptions alone, without additional parametric model assumptions, the ACE is not identified. 
 * @balke-jasa-1997 showed it is possible to derive bounds for the ACE.
-* Bounds have the interpretation of: 
+* The bounds have the following interpretation: 
 
-> There is some distribution of the unobserved confounders (of the exposure-outcome association) that yields a true ACE as small as the lower bound, while another choice produces an ACE as large as the upper bound.
+> There is some joint distribution of the unobserved confounders and the observed variables that yields a true ACE as small as the lower bound, while another choice produces an ACE as large as the upper bounds (the bounds are tight).
 
 * There are at least two ways to implement the Balke-Pearl bounds:
 
 i) conditional probabilities from contingency tables;
 ii) the polytope method due to @dawid-hsss-2003.
 
-* We implemented the polytope method since it is generalisable for identified IV models with exposures, outcomes, and instruments with more categories. Currently, we allow for a binary or 3 category instrument, and binary exposure and outcome.
+* We implemented the polytope method since it is generalisable for identified IV models with exposures, outcomes, and instruments with more categories.
+* Currently, we allow for a binary or 3 category instrument, and binary exposure and outcome.
 
 # Example Mendelian randomization analysis
 
@@ -115,7 +117,9 @@ ii) the polytope method due to @dawid-hsss-2003.
 
 # Conclusion
 
-* Use of bounds in instrumental variable analyses is regaining interest [@swanson-jasa-2018; @labrecque-cer-2018]. 
+* Use of bounds in instrumental variable analyses is regaining interest [@swanson-jasa-2018; @labrecque-cer-2018].
+* The empirical experience that the bounds are often wide is not a bad property of the method, it is a property of the typical data: Mendelian randomization data simply often are uninformative in that sense due to weak instrumental variables.
+* We recommend using the bounds when the variables are genuinely discrete, but not when the exposure is genuinely continuous [@sheehan-hg-2019].
 * Our R package and app provide a convenient interface to the bounds.
 
 # References

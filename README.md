@@ -34,6 +34,21 @@ Here are the steps to recreate the poster.
     ``` r
     rmarkdown::render('mr2019-tom-palmer-poster.Rmd',  encoding = 'UTF-8')
     ```
+    
+      - I edited the html template provided by posterdown:
+          - to make the icons opaque
+          - to make a level 4 header force a column break before the
+            header, so I could position “Extra Figures & Tables” at the
+            top of the column. Note since I wanted the text of that
+            header to be at level 1 I had to introduce the column break
+            with a header level that I didn’t use anywhere else on the
+            poster.
+        <!-- end list -->
+        ``` html
+        .section h4 {
+            break-before: column;
+        }
+        ```
 
 5.  To render on github pages:
     
@@ -131,7 +146,7 @@ Here are the steps to recreate the poster.
         ##  collate  English_United Kingdom.1252 
         ##  ctype    English_United Kingdom.1252 
         ##  tz       Europe/London               
-        ##  date     2019-07-09                  
+        ##  date     2019-07-10                  
         ## 
         ## - Packages --------------------------------------------------------------
         ##  package     * version date       lib

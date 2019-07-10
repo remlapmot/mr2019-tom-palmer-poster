@@ -436,11 +436,12 @@ span > #tab:mytable {
 <div id="methods" class="section level1">
 <h1>Methods</h1>
 <ul>
+<li>Under the instrumental variable assumptions alone, without additional parametric model assumptions, the ACE is not identified.</li>
 <li><span class="citation">Balke and Pearl (1997)</span> showed it is possible to derive bounds for the ACE.</li>
-<li>Bounds have the interpretation of:</li>
+<li>The bounds have the following interpretation:</li>
 </ul>
 <blockquote>
-<p>There is some distribution of the unobserved confounders (of the exposure-outcome association) that yields a true ACE as small as the lower bound, while another choice produces an ACE as large as the upper bound.</p>
+<p>There is some joint distribution of the unobserved confounders and the observed variables that yields a true ACE as small as the lower bound, while another choice produces an ACE as large as the upper bounds (the bounds are tight).</p>
 </blockquote>
 <ul>
 <li>There are at least two ways to implement the Balke-Pearl bounds:</li>
@@ -450,7 +451,8 @@ span > #tab:mytable {
 <li>the polytope method due to <span class="citation">Dawid (2003)</span>.</li>
 </ol>
 <ul>
-<li>We implemented the polytope method since it is generalisable for identified IV models with exposures, outcomes, and instruments with more categories. Currently, we allow for a binary or 3 category instrument, and binary exposure and outcome.</li>
+<li>We implemented the polytope method since it is generalisable for identified IV models with exposures, outcomes, and instruments with more categories.</li>
+<li>Currently, we allow for a binary or 3 category instrument, and binary exposure and outcome.</li>
 </ul>
 </div>
 <div id="example-mendelian-randomization-analysis" class="section level1">
@@ -468,6 +470,8 @@ span > #tab:mytable {
 <h1>Conclusion</h1>
 <ul>
 <li>Use of bounds in instrumental variable analyses is regaining interest <span class="citation">(Swanson et al. 2018; Labrecque and Swanson 2018)</span>.</li>
+<li>The empirical experience that the bounds are often wide is not a bad property of the method, it is a property of the typical data: Mendelian randomization data simply often are uninformative in that sense due to weak instrumental variables.</li>
+<li>We recommend using the bounds when the variables are genuinely discrete, but not when the exposure is genuinely continuous <span class="citation">(Sheehan and Didelez 2019)</span>.</li>
 <li>Our R package and app provide a convenient interface to the bounds.</li>
 </ul>
 </div>
@@ -475,22 +479,25 @@ span > #tab:mytable {
 <h1>References</h1>
 <div id="refs" class="references">
 <div id="ref-balke-jasa-1997">
-<p>Balke, A., and J. Pearl. 1997. “Bounds on treatment effects from studies with imperfect compliance.” <em>Journal of the American Statistical Association</em> 92 (439): 1172–6.</p>
+<p>Balke, A., and J. Pearl. 1997. “Bounds on treatment effects from studies with imperfect compliance.” <em>Journal of the American Statistical Association</em> 92 (439): 1172–6. <a href="https://doi.org/10.1080/01621459.1997.10474074">https://doi.org/10.1080/01621459.1997.10474074</a>.</p>
 </div>
 <div id="ref-dawid-hsss-2003">
 <p>Dawid, A. P. 2003. “Causal Inference Using Influence Diagrams: The Problem of Partial Compliance (with Discusssion).” In <em>Highly Structured Stochastic Systems</em>, edited by P. J. Green, N. L. Hjort, and S. Richardson, 45–65. New York: Oxford University Press.</p>
 </div>
 <div id="ref-labrecque-cer-2018">
-<p>Labrecque, Jeremy, and Sonja A Swanson. 2018. “Understanding the Assumptions Underlying Instrumental Variable Analyses: A Brief Review of Falsification Strategies and Related Tools.” <em>Current Epidemiology Reports</em> 5 (3): 214–20.</p>
+<p>Labrecque, Jeremy, and Sonja A Swanson. 2018. “Understanding the Assumptions Underlying Instrumental Variable Analyses: A Brief Review of Falsification Strategies and Related Tools.” <em>Current Epidemiology Reports</em> 5 (3): 214–20. <a href="https://doi.org/10.1007/s4047">https://doi.org/10.1007/s4047</a>.</p>
 </div>
 <div id="ref-meleady-ajcn-2003">
-<p>Meleady, Raymond, Per M Ueland, Henk Blom, Alexander S Whitehead, Helga Refsum, Leslie E Daly, Stein Emil Vollset, et al. 2003. “Thermolabile Methylenetetrahydrofolate Reductase, Homocysteine, and Cardiovascular Disease Risk: The European Concerted Action Project.” <em>The American Journal of Clinical Nutrition</em> 77 (1): 63–70.</p>
+<p>Meleady, Raymond, Per M Ueland, Henk Blom, Alexander S Whitehead, Helga Refsum, Leslie E Daly, Stein Emil Vollset, et al. 2003. “Thermolabile Methylenetetrahydrofolate Reductase, Homocysteine, and Cardiovascular Disease Risk: The European Concerted Action Project.” <em>The American Journal of Clinical Nutrition</em> 77 (1): 63–70. <a href="https://doi.org/10.1093/ajcn/77.1.63">https://doi.org/10.1093/ajcn/77.1.63</a>.</p>
 </div>
 <div id="ref-bpbounds-package">
 <p>Palmer, T. M., R. Ramsahai, V. Didelez, and N. A. Sheehan. 2018. <em>bpbounds: R package implementing Balke-Pearl bounds for the average causal effect</em>. <a href="https://CRAN.R-project.org/package=bpbounds">https://CRAN.R-project.org/package=bpbounds</a>.</p>
 </div>
 <div id="ref-palmer-sj-2011">
 <p>Palmer, T. M., R. R. Ramsahai, V. Didelez, and N. A Sheehan. 2011. “Nonparametric Bounds for the Causal Effect in a Binary Instrumental-Variable Model.” <em>Stata Journal</em> 11 (3): 345–67. <a href="http://www.stata-journal.com/article.html?article=st0232">http://www.stata-journal.com/article.html?article=st0232</a>.</p>
+</div>
+<div id="ref-sheehan-hg-2019">
+<p>Sheehan, Nuala A, and Vanessa Didelez. 2019. “Epidemiology, genetic epidemiology and Mendelian randomisation: more need than ever to attend to detail.” <em>Human Genetics</em>, 1–16. <a href="https://doi.org/10.1007/s00439-019-02027-3">https://doi.org/10.1007/s00439-019-02027-3</a>.</p>
 </div>
 <div id="ref-swanson-jasa-2018">
 <p>Swanson, Sonja A., Miguel A. Hernán, Matthew Miller, James M. Robins, and Thomas S. Richardson. 2018. “Partial Identification of the Average Treatment Effect Using Instrumental Variables: Review of Methods for Binary Instruments, Treatments, and Outcomes.” <em>Journal of the American Statistical Association</em> 113 (522): 933–47. <a href="https://doi.org/10.1080/01621459.2018.1434530">https://doi.org/10.1080/01621459.2018.1434530</a>.</p>
