@@ -4,9 +4,9 @@ output: github_document
 bibliography: MyBib.bib
 ---
 
-```{r setup, include=FALSE}
+```{r include=FALSE}
 # switch this to eval = TRUE to evaluate the chunks that knit the poster and save the pdf
-knitr::opts_chunk$set(eval = FALSE)
+knitr::opts_chunk$set(eval = TRUE)
 ```
 
 * The full information about the Mendelian randomization conference is at https://www.mendelianrandomization.org.uk/ .

@@ -123,23 +123,74 @@ Here are the steps to recreate the poster.
         ##  date     2019-07-11                  
         ## 
         ## - Packages --------------------------------------------------------------
-        ##  package     * version date       lib source        
-        ##  assertthat    0.2.1   2019-03-21 [1] CRAN (R 3.6.0)
-        ##  cli           1.1.0   2019-03-19 [1] CRAN (R 3.6.0)
-        ##  crayon        1.3.4   2017-09-16 [1] CRAN (R 3.6.0)
-        ##  digest        0.6.20  2019-07-04 [1] CRAN (R 3.6.0)
-        ##  evaluate      0.14    2019-05-28 [1] CRAN (R 3.6.0)
-        ##  htmltools     0.3.6   2017-04-28 [1] CRAN (R 3.6.0)
-        ##  knitr         1.23    2019-05-18 [1] CRAN (R 3.6.0)
-        ##  magrittr      1.5     2014-11-22 [1] CRAN (R 3.6.0)
-        ##  Rcpp          1.0.1   2019-03-17 [1] CRAN (R 3.6.0)
-        ##  rmarkdown     1.13    2019-05-22 [1] CRAN (R 3.6.0)
-        ##  sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 3.6.0)
-        ##  stringi       1.4.3   2019-03-12 [1] CRAN (R 3.6.0)
-        ##  stringr       1.4.0   2019-02-10 [1] CRAN (R 3.6.0)
-        ##  withr         2.1.2   2018-03-15 [1] CRAN (R 3.6.0)
-        ##  xfun          0.8     2019-06-25 [1] CRAN (R 3.6.0)
-        ##  yaml          2.2.0   2018-07-25 [1] CRAN (R 3.6.0)
+        ##  package     * version date       lib
+        ##  assertthat    0.2.1   2019-03-21 [1]
+        ##  bookdown      0.11.2  2019-07-08 [1]
+        ##  bpbounds    * 0.1.3   2019-02-10 [1]
+        ##  cli           1.1.0   2019-03-19 [1]
+        ##  crayon        1.3.4   2017-09-16 [1]
+        ##  digest        0.6.20  2019-07-04 [1]
+        ##  evaluate      0.14    2019-05-28 [1]
+        ##  fs            1.3.1   2019-05-06 [1]
+        ##  highr         0.8     2019-03-20 [1]
+        ##  htmltools     0.3.6   2017-04-28 [1]
+        ##  httpuv        1.5.1   2019-04-05 [1]
+        ##  jsonlite      1.6     2018-12-07 [1]
+        ##  knitr         1.23    2019-05-18 [1]
+        ##  later         0.8.0   2019-02-11 [1]
+        ##  magrittr      1.5     2014-11-22 [1]
+        ##  mime          0.7     2019-06-11 [1]
+        ##  pagedown      0.2.9   2019-07-08 [1]
+        ##  posterdown    1.0     2019-07-08 [1]
+        ##  processx      3.4.0   2019-07-03 [1]
+        ##  promises      1.0.1   2018-04-13 [1]
+        ##  ps            1.3.0   2018-12-21 [1]
+        ##  R6            2.4.0   2019-02-14 [1]
+        ##  Rcpp          1.0.1   2019-03-17 [1]
+        ##  rlang         0.4.0   2019-06-25 [1]
+        ##  rmarkdown     1.13    2019-05-22 [1]
+        ##  servr         0.14    2019-06-11 [1]
+        ##  sessioninfo   1.1.1   2018-11-05 [1]
+        ##  stringi       1.4.3   2019-03-12 [1]
+        ##  stringr       1.4.0   2019-02-10 [1]
+        ##  websocket     1.0.0   2019-06-18 [1]
+        ##  withr         2.1.2   2018-03-15 [1]
+        ##  xfun          0.8     2019-06-25 [1]
+        ##  yaml          2.2.0   2018-07-25 [1]
+        ##  source                                 
+        ##  CRAN (R 3.6.0)                         
+        ##  Github (rstudio/bookdown@364092a)      
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.1)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  Github (rstudio/pagedown@65bd7f1)      
+        ##  Github (brentthorne/posterdown@92b6cad)
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
+        ##  CRAN (R 3.6.0)                         
         ## 
         ## [1] C:/Users/palmertm/library
         ## [2] C:/Program Files/R/R-3.6.0/library
