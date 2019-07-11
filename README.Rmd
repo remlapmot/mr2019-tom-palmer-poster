@@ -4,6 +4,11 @@ output: github_document
 bibliography: MyBib.bib
 ---
 
+```{r setup, include=FALSE}
+# switch this to eval = TRUE to evaluate the chunks that knit the poster and save the pdf
+knitr::opts_chunk$set(eval = FALSE)
+```
+
 * The full information about the Mendelian randomization conference is at https://www.mendelianrandomization.org.uk/ .
 * This poster was prepared using the `posterdown` package [@posterdown].
 * The design is based on the Better Scientific Poster design by @betterposter.
@@ -30,7 +35,7 @@ Here are the steps to recreate the poster.
 
     * I edited the html template provided by posterdown:
         - to make the icons opaque
-        - to make a level 4 header force a column break before the header. This is so that I could position the "Extra Figures & Tables" header at the top of the column. Note since I wanted the text of that header to be at level 1 I had to introduce the column break with a header level that I didn't use anywhere else on the poster. I used a level 4 header, so in my edited template included the following code.
+        - to make a level 4 header force a column break before the header. This is so that I could position the "Extra Figures & Tables" header at the top of the column. Note since I wanted the text of that header to be at level 1 I had to introduce the column break with a header level that I didn't use anywhere else on the poster. I used a level 4 header, so in my edited template I included the following code.
         ```html
         .section h4 {
             break-before: column;
@@ -61,7 +66,7 @@ Here are the steps to recreate the poster.
 
 1. The pdf version of the poster can be generated either by opening the html version in Google Chrome and selecting `Print` then `Save as PDF` through the menus or by using the `chrome_print()` function in the [`pagedown`](https://github.com/rstudio/pagedown) package as follows.
 
-    ```{r, eval = FALSE}
+    ```{r}
     pagedown::chrome_print("mr2019-tom-palmer-poster.html")
     ```
 
@@ -74,7 +79,7 @@ Here are the steps to recreate the poster.
 
 1. For reproducibility, I report my R session information.
 
-    ```{r}
+    ```{r, eval=TRUE}
     # install.packages("sessioninfo") # uncomment on first run
     sessioninfo::session_info()
     ```

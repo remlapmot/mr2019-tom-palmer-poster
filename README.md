@@ -40,7 +40,7 @@ Here are the steps to recreate the poster.
             wanted the text of that header to be at level 1 I had to
             introduce the column break with a header level that I didn’t
             use anywhere else on the poster. I used a level 4 header, so
-            in my edited template included the following code.
+            in my edited template I included the following code.
         <!-- end list -->
         ``` html
         .section h4 {
@@ -123,52 +123,23 @@ Here are the steps to recreate the poster.
         ##  date     2019-07-11                  
         ## 
         ## - Packages --------------------------------------------------------------
-        ##  package     * version date       lib
-        ##  assertthat    0.2.1   2019-03-21 [1]
-        ##  bookdown      0.11.2  2019-07-08 [1]
-        ##  bpbounds    * 0.1.3   2019-02-10 [1]
-        ##  cli           1.1.0   2019-03-19 [1]
-        ##  crayon        1.3.4   2017-09-16 [1]
-        ##  digest        0.6.20  2019-07-04 [1]
-        ##  evaluate      0.14    2019-05-28 [1]
-        ##  fs            1.3.1   2019-05-06 [1]
-        ##  highr         0.8     2019-03-20 [1]
-        ##  htmltools     0.3.6   2017-04-28 [1]
-        ##  knitr         1.23    2019-05-18 [1]
-        ##  magrittr      1.5     2014-11-22 [1]
-        ##  pagedown      0.2.9   2019-07-08 [1]
-        ##  posterdown    1.0     2019-07-08 [1]
-        ##  Rcpp          1.0.1   2019-03-17 [1]
-        ##  rmarkdown     1.13    2019-05-22 [1]
-        ##  sessioninfo   1.1.1   2018-11-05 [1]
-        ##  stringi       1.4.3   2019-03-12 [1]
-        ##  stringr       1.4.0   2019-02-10 [1]
-        ##  withr         2.1.2   2018-03-15 [1]
-        ##  xfun          0.8     2019-06-25 [1]
-        ##  yaml          2.2.0   2018-07-25 [1]
-        ##  source                                 
-        ##  CRAN (R 3.6.0)                         
-        ##  Github (rstudio/bookdown@364092a)      
-        ##  CRAN (R 3.6.0)                         
-        ##  CRAN (R 3.6.0)                         
-        ##  CRAN (R 3.6.0)                         
-        ##  CRAN (R 3.6.0)                         
-        ##  CRAN (R 3.6.0)                         
-        ##  CRAN (R 3.6.1)                         
-        ##  CRAN (R 3.6.0)                         
-        ##  CRAN (R 3.6.0)                         
-        ##  CRAN (R 3.6.0)                         
-        ##  CRAN (R 3.6.0)                         
-        ##  Github (rstudio/pagedown@65bd7f1)      
-        ##  Github (brentthorne/posterdown@92b6cad)
-        ##  CRAN (R 3.6.0)                         
-        ##  CRAN (R 3.6.0)                         
-        ##  CRAN (R 3.6.0)                         
-        ##  CRAN (R 3.6.0)                         
-        ##  CRAN (R 3.6.0)                         
-        ##  CRAN (R 3.6.0)                         
-        ##  CRAN (R 3.6.0)                         
-        ##  CRAN (R 3.6.0)                         
+        ##  package     * version date       lib source        
+        ##  assertthat    0.2.1   2019-03-21 [1] CRAN (R 3.6.0)
+        ##  cli           1.1.0   2019-03-19 [1] CRAN (R 3.6.0)
+        ##  crayon        1.3.4   2017-09-16 [1] CRAN (R 3.6.0)
+        ##  digest        0.6.20  2019-07-04 [1] CRAN (R 3.6.0)
+        ##  evaluate      0.14    2019-05-28 [1] CRAN (R 3.6.0)
+        ##  htmltools     0.3.6   2017-04-28 [1] CRAN (R 3.6.0)
+        ##  knitr         1.23    2019-05-18 [1] CRAN (R 3.6.0)
+        ##  magrittr      1.5     2014-11-22 [1] CRAN (R 3.6.0)
+        ##  Rcpp          1.0.1   2019-03-17 [1] CRAN (R 3.6.0)
+        ##  rmarkdown     1.13    2019-05-22 [1] CRAN (R 3.6.0)
+        ##  sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 3.6.0)
+        ##  stringi       1.4.3   2019-03-12 [1] CRAN (R 3.6.0)
+        ##  stringr       1.4.0   2019-02-10 [1] CRAN (R 3.6.0)
+        ##  withr         2.1.2   2018-03-15 [1] CRAN (R 3.6.0)
+        ##  xfun          0.8     2019-06-25 [1] CRAN (R 3.6.0)
+        ##  yaml          2.2.0   2018-07-25 [1] CRAN (R 3.6.0)
         ## 
         ## [1] C:/Users/palmertm/library
         ## [2] C:/Program Files/R/R-3.6.0/library
