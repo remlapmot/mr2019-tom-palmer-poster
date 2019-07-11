@@ -30,6 +30,24 @@ Here are the steps to recreate the poster.
     ```
 
 3.  Edit the Rmd file with your content.
+    
+      - I edited the html template provided by posterdown:
+          - to make the icons opaque
+          - to make a level 4 header force a column break before the
+            header. This is so that I could position the “Extra Figures
+            & Tables” header at the top of the column. Note since I
+            wanted the text of that header to be at level 1 I had to
+            introduce the column break with a header level that I didn’t
+            use anywhere else on the poster. I used a level 4 header, so
+            in my edited template included the following code.
+        <!-- end list -->
+        ``` html
+        .section h4 {
+            break-before: column;
+        }
+        ```
+        Then to trigger the column break in the poster Rmd file I
+        included an empty level 4 header `####`.
 
 4.  Render the Rmd file to html. This can be achieved either by clicking
     the Knit button in RStudio or by running (change the file name for
@@ -38,21 +56,6 @@ Here are the steps to recreate the poster.
     ``` r
     rmarkdown::render('mr2019-tom-palmer-poster.Rmd',  encoding = 'UTF-8')
     ```
-    
-      - I edited the html template provided by posterdown:
-          - to make the icons opaque
-          - to make a level 4 header force a column break before the
-            header, so I could position “Extra Figures & Tables” at the
-            top of the column. Note since I wanted the text of that
-            header to be at level 1 I had to introduce the column break
-            with a header level that I didn’t use anywhere else on the
-            poster.
-        <!-- end list -->
-        ``` html
-        .section h4 {
-            break-before: column;
-        }
-        ```
 
 5.  To render on github pages:
     
@@ -98,7 +101,7 @@ Here are the steps to recreate the poster.
     rmarkdown::render('README.Rmd',  encoding = 'UTF-8')
     ```
 
-8.  For reproducibility, report R session information.
+8.  For reproducibility, I report my R session information.
     
     ``` r
     # install.packages("sessioninfo") # uncomment on first run
@@ -115,7 +118,7 @@ Here are the steps to recreate the poster.
         ##  collate  English_United Kingdom.1252 
         ##  ctype    English_United Kingdom.1252 
         ##  tz       Europe/London               
-        ##  date     2019-07-10                  
+        ##  date     2019-07-11                  
         ## 
         ## - Packages --------------------------------------------------------------
         ##  package     * version date       lib
