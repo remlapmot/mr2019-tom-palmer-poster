@@ -64,8 +64,9 @@ Here are the steps to recreate the poster.
         folder of figures, `Figures`, to the `docs` folder because I
         prefer enabling github pages for a repo from the docs folder
         rather than from a separate branch. The html file is renamed to
-        index.html (and its \_file folder renamed) so the github pages
-        page will render.
+        index.html (its \_files folder doesn’t need renaming, and in
+        fact is empty, so doesn’t show on the GitHub repo) so the github
+        pages page will render.
     
     <!-- end list -->
     
@@ -76,7 +77,7 @@ Here are the steps to recreate the poster.
                   overwrite = TRUE)
     fs::dir_copy("./Figures", "./docs/Figures", overwrite = TRUE)
     fs::dir_copy("./mr2019-tom-palmer-poster_files", 
-                 "./docs/index_files", overwrite = TRUE)
+                 "./docs/mr2019-tom-palmer-poster_files", overwrite = TRUE)
     ```
     
       - I then enabled github pages for this repository in the
@@ -120,12 +121,12 @@ Here are the steps to recreate the poster.
         ##  collate  English_United Kingdom.1252 
         ##  ctype    English_United Kingdom.1252 
         ##  tz       Europe/London               
-        ##  date     2019-07-11                  
+        ##  date     2019-07-12                  
         ## 
         ## - Packages --------------------------------------------------------------
         ##  package     * version date       lib
         ##  assertthat    0.2.1   2019-03-21 [1]
-        ##  bookdown      0.11.2  2019-07-08 [1]
+        ##  bookdown      0.11.2  2019-07-12 [1]
         ##  bpbounds    * 0.1.3   2019-02-10 [1]
         ##  cli           1.1.0   2019-03-19 [1]
         ##  crayon        1.3.4   2017-09-16 [1]
@@ -141,7 +142,7 @@ Here are the steps to recreate the poster.
         ##  magrittr      1.5     2014-11-22 [1]
         ##  mime          0.7     2019-06-11 [1]
         ##  pagedown      0.2.9   2019-07-08 [1]
-        ##  posterdown    1.0     2019-07-08 [1]
+        ##  posterdown    1.0     2019-07-11 [1]
         ##  processx      3.4.0   2019-07-03 [1]
         ##  promises      1.0.1   2018-04-13 [1]
         ##  ps            1.3.0   2018-12-21 [1]
@@ -175,7 +176,7 @@ Here are the steps to recreate the poster.
         ##  CRAN (R 3.6.0)                         
         ##  CRAN (R 3.6.0)                         
         ##  Github (rstudio/pagedown@65bd7f1)      
-        ##  Github (brentthorne/posterdown@92b6cad)
+        ##  Github (brentthorne/posterdown@d259f41)
         ##  CRAN (R 3.6.0)                         
         ##  CRAN (R 3.6.0)                         
         ##  CRAN (R 3.6.0)                         
