@@ -1,5 +1,5 @@
 ---
-title: "Repository for my poster at the 2019 Mendelian randomization conference"
+title: "Repository for my poster at the Mendelian randomization conference 2019"
 output: github_document
 bibliography: MyBib.bib
 ---
@@ -28,7 +28,8 @@ Here are the steps to recreate the poster.
     ```{r, eval=FALSE}
     rmarkdown::draft("mr2019-tom-palmer-poster.Rmd", 
                      template = "posterdown_betterport", 
-                     package = "posterdown")
+                     package = "posterdown",
+                     edit = FALSE)
     ```
 
 1. Edit the Rmd file with your content.
@@ -36,7 +37,7 @@ Here are the steps to recreate the poster.
     * I edited the html template provided by posterdown:
         - to make the icons opaque
         - to make a level 4 header force a column break before the header. This is so that I could position the "Extra Figures & Tables" header at the top of the column. Note since I wanted the text of that header to be at level 1 I had to introduce the column break with a header level that I didn't use anywhere else on the poster. I used a level 4 header, so in my edited template I included the following code.
-        ```html
+        ```css
         .section h4 {
             break-before: column;
         }

@@ -1,4 +1,4 @@
-Repository for my poster at the 2019 Mendelian randomization conference
+Repository for my poster at the Mendelian randomization conference 2019
 ================
 
   - The full information about the Mendelian randomization conference is
@@ -27,7 +27,8 @@ Here are the steps to recreate the poster.
     ``` r
     rmarkdown::draft("mr2019-tom-palmer-poster.Rmd", 
                      template = "posterdown_betterport", 
-                     package = "posterdown")
+                     package = "posterdown",
+                     edit = FALSE)
     ```
 
 3.  Edit the Rmd file with your content.
@@ -42,7 +43,7 @@ Here are the steps to recreate the poster.
             use anywhere else on the poster. I used a level 4 header, so
             in my edited template I included the following code.
         <!-- end list -->
-        ``` html
+        ``` css
         .section h4 {
             break-before: column;
         }
